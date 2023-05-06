@@ -6,12 +6,14 @@ const VideoPlayer = ({ movieDetails }) => {
       className="col-6 border border-2"
       style={{ backgroundColor: "#2c548b" }}
     >
-      <video
-        src={movieDetails && movieDetails.VideoLink}
-        className="w-100"
-        autoPlay
-        controls
-      ></video>
+      {movieDetails && (
+        <video
+          src={movieDetails && movieDetails.VideoLink}
+          className="w-100"
+          autoPlay
+          controls
+        ></video>
+      )}
     </div>
   );
 };
